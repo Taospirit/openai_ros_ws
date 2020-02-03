@@ -25,6 +25,7 @@ class TurtleBot2WallEnv(turtlebot2_env.TurtleBot2Env):
         ROSLauncher(rospackage_name="turtlebot_gazebo",
                     launch_file_name="start_world_wall.launch",
                     ros_ws_abspath=ros_ws_abspath)
+        # roslaunch turtleboe_gazebo start_world_wall.launch
 
         # Load Params from the desired Yaml file
         LoadYamlFileParamsTest(rospackage_name="openai_ros",
@@ -33,6 +34,7 @@ class TurtleBot2WallEnv(turtlebot2_env.TurtleBot2Env):
 
         # Here we will add any init functions prior to starting the MyRobotEnv
         super(TurtleBot2WallEnv, self).__init__(ros_ws_abspath)
+        # roslaunch turtlebot_gazebo put_robot_in_world.launch
 
         # Only variable needed to be set here
         number_actions = rospy.get_param('/turtlebot2/n_actions')

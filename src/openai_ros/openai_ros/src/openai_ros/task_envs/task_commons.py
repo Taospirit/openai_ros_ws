@@ -11,7 +11,7 @@ def LoadYamlFileParamsTest(rospackage_name, rel_path_from_package_to_file, yaml_
     path_config_file = os.path.join(config_dir, yaml_file_name)
     
     paramlist=rosparam.load_file(path_config_file)
-    
+    # print (paramlist)
     for params, ns in paramlist:
         rosparam.upload_params(ns,params)
         

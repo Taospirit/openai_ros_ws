@@ -77,7 +77,7 @@ class ROSLauncher(object):
             command = source_env_command+roslaunch_command
             rospy.logwarn("Launching command="+str(command))
             # shell端启动roslaunch命令
-            p = subprocess.Popen(command, shell=True)
+            p = subprocess.Popen(command, shell=True, executable='/bin/zsh')
             # p = subprocess.Popen(command)
 
             state = p.poll()
