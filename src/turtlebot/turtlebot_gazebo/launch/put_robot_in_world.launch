@@ -4,6 +4,9 @@
   <arg name="stacks"    value="$(optenv TURTLEBOT_STACKS hexagons)"/>  <!-- circles, hexagons -->
   <arg name="3d_sensor" value="$(optenv TURTLEBOT_3D_SENSOR kinect)"/>  <!-- kinect, asus_xtion_pro -->
 
+  <arg name="rviz" value="true"/>
+  <arg name="rviz_file" value="single_turtlebot"/>
+
   <include file="$(find turtlebot_gazebo)/launch/includes/$(arg base).launch.xml">
     <arg name="base" value="$(arg base)"/>
     <arg name="stacks" value="$(arg stacks)"/>
@@ -14,4 +17,7 @@
     <param name="publish_frequency" type="double" value="30.0" />
   </node>
 
+  <group if="$(arg rviz)">
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find turtlebot_gazebo)/rviz/$(arg rviz_file).rviz" />
+  </group>
 </launch>

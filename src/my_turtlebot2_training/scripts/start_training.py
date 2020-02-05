@@ -9,6 +9,8 @@ VERSION = sys.version_info.major
 #     sys.path.append(conda_path)
 #     import gym
 #     from gym import wrappers
+import gym
+from gym import wrappers
 
 import numpy
 import time

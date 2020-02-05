@@ -250,7 +250,7 @@ class TurtleBot2WallEnv(turtlebot2_env.TurtleBot2Env):
                 rospy.logwarn("DECREASE IN DISTANCE GOOD")
                 reward += self.forwards_reward
             else:
-                rospy.logerr("ENCREASE IN DISTANCE BAD")
+                rospy.logerr("INCREASE IN DISTANCE BAD")
                 reward += 0
 
         else:
