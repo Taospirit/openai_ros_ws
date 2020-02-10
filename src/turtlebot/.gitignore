@@ -4,3 +4,5 @@
 !turtlebot_bringup
 !turtlebot_description
 !turtlebot_gazebo
+!kobuki_description
+!turtlebot_create
